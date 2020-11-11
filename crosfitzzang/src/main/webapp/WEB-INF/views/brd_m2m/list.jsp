@@ -63,7 +63,11 @@
 			});//keyup
 			
 			$("#btn_wform").click(function() {
+				if( $.trim ( "${login_dto.mno}" ) == "") {
+					alert("로그인 후 이용해 주세요.");
+				}else{
 				location.href="${root}/m2m/wform";
+				}
 			});//click
 		});//ready
 		
